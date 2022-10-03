@@ -1,5 +1,6 @@
 import "./App.css";
 import { useEffect } from "react";
+import Header from "./components/Header/Header";
 const tg = window.Telegram.WebApp;
 
 function App() {
@@ -7,13 +8,9 @@ function App() {
     tg.ready();
   }, []);
 
-  const onClose = () => {
-    tg.close();
-  };
-
   return (
     <div className="App">
-      <button onClick={onClose}>Close</button>
+      <Header />
     </div>
   );
 }
